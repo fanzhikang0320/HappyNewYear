@@ -1,0 +1,4 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <button bindtap="open" class='btn-open'>开启祝福</button>
+</view>

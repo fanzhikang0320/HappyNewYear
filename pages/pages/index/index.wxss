@@ -1,0 +1,38 @@
+/* pages/index/index.wxss */
+.container {
+  /* background-color: rgb(157, 255, 0); */
+}
+.btn-open {
+  width: 200rpx;
+  margin-top: 40rpx;
+  position: relative;
+  background-color: #f40;
+  border-radius: 50rpx;
+}
+@keyframes open {
+  from {
+    width: 80rpx;
+    opacity: 0.4
+  }
+  to {
+    width: 100%;
+    opacity: 0.1
+  }
+
+}
+.btn-open::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40rpx;
+  height: 100%;
+  border-radius: 33rpx;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  opacity: 0.3;
+  animation: open 1s linear infinite;
+}
+
+
