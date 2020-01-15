@@ -1,4 +1,143 @@
 <!--pages/index/index.wxml-->
 <view class="container">
-  <button bindtap="open" class='btn-open'>开启祝福</button>
+
+  <!-- 背景 -->
+  <image src="http://chuantu.xyz/t6/712/1578914162x2073530527.png" class="bg1"></image>
+  <image src="http://chuantu.xyz/t6/712/1578914087x2073530529.gif" class="dongtaibg"></image>
+
+  <!-- 倒计时区域 -->
+  <view class="count-down-box">
+    <image src="http://chuantu.xyz/t6/712/1578914193x2073530529.png" class="daojishibg" ></image>
+    <view class="number-box">
+      <view class="num">
+        <view class="scroll-box" style="top:{{hundred}}rpx">
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914225x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914246x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914269x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914288x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914306x2073530529.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914326x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914342x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914371x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914395x2073530529.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914418x2073530527.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="num">
+        <view class="scroll-box" style="top:{{decade}}rpx">
+        <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914225x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914246x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914269x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914288x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914306x2073530529.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914326x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914342x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914371x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914395x2073530529.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914418x2073530527.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="num">
+        <view class="scroll-box" style="top:{{units}}rpx">
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914225x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914246x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914269x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914288x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914306x2073530529.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914326x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914342x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914371x2073530527.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914395x2073530529.png"></image>
+          </view>
+          <view class="number">
+            <image src="http://chuantu.xyz/t6/712/1578914418x2073530527.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部按钮区域 -->
+  <view class="btn-box">
+      <view class="text">
+        <view class="time-box" style="display:{{!isOpen ? 'none' : 'block'}}">
+          <image src="http://chuantu.xyz/t6/712/1578977431x992245926.png" class="font-image"></image>
+          <text>{{hour}}：</text><text>{{minute}}：</text><text>{{second}}</text>
+        </view>
+        <view class="command-box" style="display:{{isOpen ? 'none' : 'block'}}">
+          <view class="command-text">口令</view>
+          <image src="http://chuantu.xyz/t6/712/1578982995x992245926.png" class="command-img"></image>
+        </view>
+      </view>
+      <button bindtouchstart="start" class="btn-open" bindtouchend="end" style="display:{{isOpen ? 'none' : 'block'}}">
+        <text>开启祝福</text>
+        <image src="http://chuantu.xyz/t6/712/1578985226x1031866013.png" class="maikefeng"></image>
+      </button>
+      <button class="btn-close" style="display:{{!isOpen ? 'none' : 'block'}}" bindtap="close">敬请期待...</button>
+  
+  </view>
+    
+  <!-- loading区域 -->
+  <view class="loading-box" hidden="{{isShowLoading}}">
+    <image src="http://chuantu.xyz/t6/712/1578991417x2073530529.gif" class="yuyin-loading"></image>
+    <view class="yuyin-text">正在录音...</view>
+  </view>
+
 </view>

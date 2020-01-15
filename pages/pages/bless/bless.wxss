@@ -1,0 +1,67 @@
+/* pages/bless/bless.wxss */
+
+.container {
+  position: relative;
+  
+}
+.cloud-box {
+  position: absolute;
+  z-index: -1;
+  height: 350rpx;
+  width: 100%;
+  /* background-color: yellow; */
+}
+.cloud-box image {
+  width: 100%;
+  height: 350rpx;
+}
+.innerContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://chuantu.xyz/t6/712/1579067310x2073530529.png');
+  background-size: cover; 
+}
+.content {
+  position: absolute;
+  top: 300rpx;
+  width: 100%;
+  height: 700rpx;
+  box-sizing: border-box;
+  
+}
+.paper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 700rpx;
+}
+.cat {
+  position: absolute;
+  width: 400rpx;
+  left: 50%;
+  transform: translateX(-40%) translateY(-47%);
+}
+.text-box {
+  position: absolute;
+  width: 480rpx;
+  height: 500rpx;
+  /* background-color: #ccc; */
+  top: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+   text-indent: 2rem;
+   text-align: left;
+   letter-spacing: 4rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+   
+}
+
+.friend {
+  
+  width: 400rpx;
+  height: 80rpx;
+  float: right;
+}

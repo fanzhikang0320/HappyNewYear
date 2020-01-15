@@ -1,14 +1,104 @@
 /* pages/index/index.wxss */
 .container {
-  /* background-color: rgb(157, 255, 0); */
+  position: relative;
+
+}
+.bg1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dongtaibg {
+  position: absolute;
+  width: 100%;
+  height: 35vh;
+  top: 40rpx;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+}
+.count-down-box {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  z-index: 1;
+  text-align: center;
+}
+.daojishibg {
+  height: 480rpx;
+  width: 640rpx;
+}
+.number-box{
+  position: absolute;
+  bottom: 50rpx;
+  left: 50%;
+  transform: translateX(-58%);
+  width: 450rpx;
+  height: 136rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.num {
+  position: relative;
+  flex:1;
+  width: 130rpx;
+  height: 136rpx;
+  text-align: center;
+  line-height: 136rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+}
+.scroll-box {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease 1000s;
+}
+.scroll-box .number {
+  width: 130rpx;
+  height: 136rpx;
+  box-sizing: border-box;
+}
+.scroll-box .number image {
+  width: 100%;
+  height: 100%;
 }
 .btn-open {
   width: 200rpx;
   margin-top: 40rpx;
-  position: relative;
-  background-color: #f40;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100rpx;
   border-radius: 50rpx;
+  z-index: 1;
+  background-color: #fd2901;
 }
+.btn-open text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-60%);
+}
+.maikefeng {
+  position: absolute;
+  top: 50%;
+  right: 27%;
+  transform: translateY(-45%);
+   width: 28rpx;
+   height: 28rpx;
+   display: inline-block;
+}
+
+
+
 @keyframes open {
   from {
     width: 80rpx;
@@ -20,6 +110,7 @@
   }
 
 }
+
 .btn-open::after {
   content: '';
   display: block;
@@ -34,5 +125,102 @@
   opacity: 0.3;
   animation: open 1s linear infinite;
 }
+.btn-close {
+  width: 200rpx;
+  margin-top: 40rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100rpx;
+  border-radius: 50rpx;
+  z-index: 1;
+  color: rgb(247, 231, 231);
+  background-color:#979493;
+}
+.btn-box {
+  position: absolute;
+  width: 500rpx;
+  height: 300rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12%;
+  /* background-color: #f40; */
+}
 
 
+.time-box {
+  text-align: center;
+  
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.time-box text{
+  display: inline-block;
+  font-size: 30rpx;
+  padding: 0 5rpx;
+  letter-spacing: 1rpx;
+  vertical-align: middle;
+  color: #fd2901;
+}
+.font-image { 
+  width:280rpx;
+  height: 32rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-right: 2rpx;
+}
+.command-box {
+  position: relative;
+  top: 20rpx;
+  height: 50rpx;
+  text-align: center;
+  font-size: 25rpx;
+  width: 400rpx;
+  border-top: 2rpx dashed #fd2901;
+  margin: 0 auto;
+}
+.command-text {
+  letter-spacing: 3rpx;
+  color: #fd2901;
+  transform: translateY(-15rpx);
+  background-color: #fff;
+  width: 80rpx;
+  margin: 0 auto;
+}
+.command-img {
+  box-sizing: border-box;
+  width: 148rpx;
+  height: 30rpx;
+}
+
+.loading-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 280rpx;
+  height: 280rpx;
+  background-color: #fd3232ce;
+  box-shadow: 0 0 50rpx #fd3232ce ;
+  border-radius: 20rpx;
+  z-index: 99;
+}
+
+.yuyin-loading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+   width: 230rpx;
+   height: 230rpx;
+   margin: 0 auto;
+}
+.yuyin-text {
+  position: absolute;
+  bottom: 10rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  font-size: 24rpx;
+  letter-spacing: 4rpx;
+}

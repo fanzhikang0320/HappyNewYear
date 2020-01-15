@@ -1,0 +1,22 @@
+<!--pages/bless/bless.wxml-->
+<view class="container">
+  <view class="cloud-box">
+    <image src="http://chuantu.xyz/t6/712/1579067532x2073530527.gif"></image>
+  </view>
+  <view class="innerContainer">
+      <view class="content">
+          <image src="http://chuantu.xyz/t6/712/1579072053x2073530529.gif" class="cat"></image>
+          <image src="http://chuantu.xyz/t6/712/1579071930x2073530527.png" class="paper"></image>
+          <view class="text-box">
+            <text>{{text}}</text>
+            <view class="friend">
+              <text>{{friendText}}</text>
+            </view>
+          </view>
+      </view>
+  </view>
+
+</view>
+
+
+
