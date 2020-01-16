@@ -16,7 +16,7 @@ Page({
   },
   
   timeout: null,
-  audioContext: wx.createInnerAudioContext(),//创建全局audio对象
+  audioContext:null,
   /**思路：
    * 按下后开启录音,显示相应的loading
    * 松开将录音发送至后台，加载loading
@@ -33,7 +33,7 @@ Page({
     this.setData({
       isShowLoading: false
     });
-    this.audioContext.src = '/source/open.mp3';
+   
     this.audioContext.play(); //播放音频
 
   //录音时间达到20s的时候出发关闭事件
@@ -64,7 +64,7 @@ Page({
       title: '正在分析...'
     })
     //延迟2500ms显示分析成功loading，隐藏loading背景
-    setTimeout(function () {
+    this.endTimeout = setTimeout(function () {
       wx.hideLoading();
       // 当用户语音第二次才让成功
       if (that.count == 1) {
@@ -99,11 +99,11 @@ Page({
   close () {
     let that = this;
     let contentList = ['(*╹▽╹*)~亲', ' (;￢＿￢)呃..','ヽ(。>д<)ｐ哼!'];
-    let imageList = [
-      'http://chuantu.xyz/t6/712/1578981225x1031866013.jpg',
-      'http://chuantu.xyz/t6/712/1578981263x1031866013.jpg',
-      'http://chuantu.xyz/t6/712/1578981285x1033347913.png'
-    ]
+    // let imageList = [
+    //   'http://chuantu.xyz/t6/712/1578981225x1031866013.jpg',
+    //   'http://chuantu.xyz/t6/712/1578981263x1031866013.jpg',
+    //   'http://chuantu.xyz/t6/712/1578981285x1033347913.png'
+    // ]
     wx.showToast({
       title: contentList[that.contentIndex % 3],
       icon:'none',
@@ -173,8 +173,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    
+    this.audioContext = wx.createInnerAudioContext(),//创建全局audio对象
+    this.audioContext.src = '/source/open.mp3';
   },
 
   /**
@@ -202,7 +202,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    clearTimeout(this.endTimeout)
   },
 
   /**
