@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hundred: - 9 * 134,
-    decade:  - 9 * 134,
-    units: - 9 * 136,
+    hundred: - 0* 134,
+    decade:  - 0 * 134,
+    units: - 0 * 136,
     hour:99,
     minute:99,
     second:99,
@@ -72,7 +72,6 @@ Page({
           title: '新年快乐!',
           duration: 1500,
           success: function () {
-            // console.log('tiao');
             wx.redirectTo({
               url: '/pages/bless/bless'
             })
@@ -99,15 +98,9 @@ Page({
   close () {
     let that = this;
     let contentList = ['(*╹▽╹*)~亲', ' (;￢＿￢)呃..','ヽ(。>д<)ｐ哼!'];
-    // let imageList = [
-    //   'http://chuantu.xyz/t6/712/1578981225x1031866013.jpg',
-    //   'http://chuantu.xyz/t6/712/1578981263x1031866013.jpg',
-    //   'http://chuantu.xyz/t6/712/1578981285x1033347913.png'
-    // ]
     wx.showToast({
       title: contentList[that.contentIndex % 3],
       icon:'none',
-      // image: imageList[that.contentIndex % 3],
       duration:1500,
       mask:false
     });
@@ -166,9 +159,6 @@ Page({
   },
 
 
-
-
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -205,26 +195,14 @@ Page({
     clearTimeout(this.endTimeout)
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
+ 
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
     return {
-      title:'开启新春祝福', imageUrl:'http://img.588ku.com/gif/19/12/10/619d31bee0c02d43453bad9d561d619c.gif!qk277',
+      title:'新春祝福请查收！', imageUrl:'http://img.588ku.com/gif/19/12/10/619d31bee0c02d43453bad9d561d619c.gif!qk277',
       path:'/pages/index/index'
     }
   }

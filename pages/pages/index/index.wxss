@@ -71,7 +71,8 @@
   height: 100%;
 }
 .btn-open {
-  width: 200rpx;
+  /* width: 200rpx; */
+  height: 75rpx;
   margin-top: 40rpx;
   position: absolute;
   left: 50%;
