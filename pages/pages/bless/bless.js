@@ -45,7 +45,7 @@ Page({
           text: str //每次加上上一次裁切的字
         });
       }
-    },500);
+    },600);
 
   },
   textTimeout: null, //延迟执行回调，延迟器
@@ -69,7 +69,7 @@ Page({
           friendText: friendStr
         });
       }
-    }, 500);
+    }, 600);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -83,7 +83,7 @@ Page({
    */
   onShow: function () {
     let that = this;
-    this.audioContext.src = "https://m7.music.126.net/20200116183703/51ad4c901bae4077d3c64eb4c1e2878c/ymusic/065b/0f5b/525d/1116efeaff81fbd660b2e7bb096fa15b.mp3";
+    this.audioContext.src = "https://onedrive.gimhoy.com/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbkt6VlFKTXU3UzJpVlBrR2hoeFVMcjE3NlMw.mp3";
     this.audioContext.loop = true; //循环播放
     // 如果用户开启静音模式，让用户仍旧可以听到音乐
     wx.setInnerAudioOption({
@@ -132,7 +132,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: '新春祝福请查收！',
-      imageUrl: 'http://img.588ku.com/gif/19/12/10/619d31bee0c02d43453bad9d561d619c.gif!qk277',
+      imageUrl: 'http://chuantu.xyz/t6/713/1579333830x992245926.png',
       path: '/pages/index/index'
     }
   }

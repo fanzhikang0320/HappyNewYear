@@ -202,7 +202,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title:'新春祝福请查收！', imageUrl:'http://img.588ku.com/gif/19/12/10/619d31bee0c02d43453bad9d561d619c.gif!qk277',
+      title: '新春祝福请查收！', 
+      imageUrl:'http://chuantu.xyz/t6/713/1579333830x992245926.png',
       path:'/pages/index/index'
     }
   }
